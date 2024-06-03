@@ -1,3 +1,152 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header.dark-mode {
+    background-color: #444;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+textarea, input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+body.dark-mode textarea,
+body.dark-mode input[type="text"],
+body.dark-mode input[type="date"] {
+    background-color: #444;
+    color: #f4f4f4;
+    border: 1px solid #888;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Chat Container */
+#chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#chat-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+body.dark-mode #chat-box {
+    background-color: #444;
+    color: #f4f4f4;
+    border: 1px solid #888;
+}
+
+#message-input {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Section Styles */
+
+
+section {
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode section {
+    background-color: #444;
+    color: #f4f4f4;
+    border: 1px solid #888;
+}
+
+/* Video Call */
+#video-call video {
+    width: 45%;
+    margin: 5px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+body.dark-mode button {
+    background-color: #555;
+    color: #f4f4f4;
+}
+
+body.dark-mode button:hover {
+    background-color: #777;
+}
+
 #video-call {
   margin-top: 20px;
   background-color: white;
