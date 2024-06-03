@@ -1,0 +1,25 @@
+#video-call {
+  margin-top: 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#video-call video {
+  width: 45%;
+  margin: 5px;
+}
+
+#video-call button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#video-call button:hover {
+  background-color: #555;
+}
