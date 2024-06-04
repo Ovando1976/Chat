@@ -5,51 +5,111 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>World Class Chat Application</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <header className={styles.header}>
+        <h1 className={styles.title}>World Class Chat Application</h1>
+        <nav className={styles.nav}>
+          <a href="#chat">Chat</a>
+          <a href="#tour-guide">Tour Guide</a>
+          <a href="#rideshare">Rideshare</a>
+          <a href="#food-delivery">Food Delivery</a>
+          <a href="#event-planner">Event Planner</a>
+          <a href="#hotel-booking">Hotel Booking</a>
+          <a href="#flight-booking">Flight Booking</a>
+          <a href="#boat-charter">Boat Charter</a>
+          <a href="#knowledge-base">Knowledge Base</a>
+          <a href="#video-call">Video Call</a>
+        </nav>
+        <button id="toggle-theme" className={styles.themeToggle}>Toggle Dark Mode</button>
+      </header>
 
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
+      <main className={styles.main}>
+        <section id="chat" className={styles.section}>
+          <h2>Chat</h2>
+          <div id="chat-box" className={styles.chatBox}></div>
+          <input type="text" id="message-input" className={styles.input} placeholder="Type a message and press Enter" />
+        </section>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <section id="tour-guide" className={styles.section}>
+          <h2>Virtual USVI Tour Guide</h2>
+          <textarea id="tour-question" className={styles.textarea} placeholder="Ask a question about USVI..."></textarea>
+          <button id="ask-tour-guide" className={styles.button}>Ask</button>
+          <div id="tour-answer" className={styles.answer}></div>
+        </section>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+        <section id="rideshare" className={styles.section}>
+          <h2>Ridesharing</h2>
+          <ul id="ride-list" className={styles.list}></ul>
+          <button id="request-ride" className={styles.button}>Request Ride</button>
+        </section>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+        <section id="food-delivery" className={styles.section}>
+          <h2>Food Delivery</h2>
+          <ul id="restaurant-list" className={styles.list}></ul>
+        </section>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <section id="event-planner" className={styles.section}>
+          <h2>Event Planner</h2>
+          <form id="event-form" className={styles.form}>
+            <input type="text" id="event-title" className={styles.input} placeholder="Event Title" required />
+            <textarea id="event-description" className={styles.textarea} placeholder="Event Description" required></textarea>
+            <input type="date" id="event-date" className={styles.input} required />
+            <input type="text" id="event-location" className={styles.input} placeholder="Event Location" required />
+            <button type="submit" className={styles.button}>Create Event</button>
+          </form>
+          <ul id="event-list" className={styles.list}></ul>
+        </section>
+
+        <section id="hotel-booking" className={styles.section}>
+          <h2>Hotel Booking</h2>
+          <ul id="hotel-list" className={styles.list}></ul>
+          <form id="hotel-form" className={styles.form}>
+            <input type="text" id="hotel-user-id" className={styles.input} placeholder="User ID" required />
+            <input type="date" id="hotel-date" className={styles.input} required />
+            <button type="submit" className={styles.button}>Book Hotel</button>
+          </form>
+        </section>
+
+        <section id="flight-booking" className={styles.section}>
+          <h2>Airline Tickets</h2>
+          <ul id="flight-list" className={styles.list}></ul>
+          <form id="flight-form" className={styles.form}>
+            <input type="text" id="flight-user-id" className={styles.input} placeholder="User ID" required />
+            <input type="date" id="flight-date" className={styles.input} required />
+            <button type="submit" className={styles.button}>Book Flight</button>
+          </form>
+        </section>
+
+        <section id="boat-charter" className={styles.section}>
+          <h2>Boat Charters</h2>
+          <ul id="boat-list" className={styles.list}></ul>
+          <form id="boat-form" className={styles.form}>
+            <input type="text" id="boat-user-id" className={styles.input} placeholder="User ID" required />
+            <input type="date" id="boat-date" className={styles.input} required />
+            <button type="submit" className={styles.button}>Book Boat</button>
+          </form>
+        </section>
+
+        <section id="knowledge-base" className={styles.section}>
+          <h2>USVI Knowledge Base</h2>
+          <textarea id="knowledge-question" className={styles.textarea} placeholder="Ask a question about USVI..."></textarea>
+          <button id="ask-knowledge-base" className={styles.button}>Ask</button>
+          <div id="knowledge-answer" className={styles.answer}></div>
+        </section>
+
+        <section id="video-call" className={styles.section}>
+          <h2>Video Call</h2>
+          <video id="localVideo" className={styles.video} autoplay muted></video>
+          <video id="remoteVideo" className={styles.video} autoplay></video>
+          <button id="startCall" className={styles.button}>Start Call</button>
+          <button id="joinCall" className={styles.button}>Join Call</button>
+        </section>
       </main>
 
-      <footer>
+      <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
@@ -59,57 +119,6 @@ export default function Home() {
           <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
         </a>
       </footer>
-
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
     </div>
   )
 }
